@@ -1,0 +1,9 @@
+.jumbotron-riton {
+  background-color: #F9F590; }
+
+.parallax-image {
+  background-image: url("/images/ODEbsmv.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }

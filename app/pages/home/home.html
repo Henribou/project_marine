@@ -1,0 +1,29 @@
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron parallax-image">
+    <div class="container">
+        <h1>Projet de Marine</h1>
+        <p>Parce que je le vaux bien test</p>
+    </div>
+</div>
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-4 text-center" ng-repeat="conte in contes">
+            <img class="img-circle" src="images/books.jpg" width="140" height="140">
+            <h2>{{ conte.name }}</h2>
+            <p>{{ conte.description }} bis</p>
+            <p><a class="btn btn-default" href="#/contes/{{conte.url}}" role="button">Détails &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-12 text-center" ng-repeat="conte in contes">
+            <h2>{{ conte.name }}</h2>
+            <p>{{ conte.description }}</p>
+            <p>{{ conte.text }}</p>
+        </div>
+    </div>
+</div>
