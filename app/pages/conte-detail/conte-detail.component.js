@@ -5,10 +5,10 @@ angular.
 module('conteDetail').
 component('conteDetail', {
     templateUrl: 'pages/conte-detail/conte-detail.tmpl.html',
-    controller: ['$scope', '$routeParams', '$firebaseObject',
-        function conteDetailController($scope, $routeParams, $firebaseObject) {
+    controller: ['$scope', '$stateParams', '$firebaseObject',
+        function conteDetailController($scope, $stateParams, $firebaseObject) {
 
-            this.conteUrl = $routeParams.conteUrl;
+            this.conteUrl = $stateParams.url;
 
             var ref = firebase.database().ref().child("contes").child(this.conteUrl);
             $scope.conte = $firebaseObject(ref);

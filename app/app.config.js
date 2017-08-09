@@ -3,22 +3,30 @@
 
     angular
         .module('app')
-        .config(['$locationProvider', '$routeProvider',
-            function conffig($locationProvider, $routeProvider) {
-                $locationProvider.hashPrefix('');
-                // Set default view of our app to home
+        .config(['$stateProvider', '$urlRouterProvider',
+            function config($stateProvider, $urlRouterProvider) {
 
-                $routeProvider.
-                when('/contes/:conteUrl', {
-                    template: '<conte-detail></conte-detail>'
-                }).
-                when('home/about', {
-                    redirectTo: '/about'
-                }).
-                otherwise({
-                    redirectTo: '/home'
-                });
+                $urlRouterProvider.otherwise('/home');
 
+                $stateProvider
+
+                // HOME state
+                    .state('home', {
+                        url: '/home',
+                        templateUrl: 'pages/home/home.tmpl.html',
+                        controller: 'homeCtrl'
+                    })
+
+                    .state('about', {
+                        url:'/about',
+                        templateUrl: 'pages/about/about.tmpl.html',
+                        controller: 'aboutCtrl'
+                    })
+
+                    .state('contes', {
+                        url: '/contes/:url',
+                        template: '<conte-detail></conte-detail>',
+                    })
             }
         ])
 })();

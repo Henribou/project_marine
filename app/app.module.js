@@ -3,10 +3,10 @@
 
     // Define the conte-detail module
     angular.module('app', [
-        'ngRoute',
         'firebase',
-        'ngRoute',
         'ngMaterial',
-        'conteDetail'
+        'conteDetail',
+        'ui.router',
+        'ngRoute'
     ]);
 })();
