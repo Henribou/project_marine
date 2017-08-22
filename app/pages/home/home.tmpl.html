@@ -44,7 +44,7 @@
     </a>
 </div>
 
-<div class="container-fluid column">
+<div class="container-fluid">
     <h2 class="text-center">
         Citation
     </h2>
@@ -55,35 +55,38 @@
 
 </div>
 
-
-
-
-
-
-
-
-
-
-
-<div class="container">
-    <!-- Example row of columns -->
-    <div class="row">
-        <div class="col-md-4 text-center" ng-repeat="conte in contes">
-            <img class="img-circle" src="images/books.jpg" width="140" height="140">
-            <h2>{{ conte.name }}</h2>
-            <p>{{ conte.description }} bis</p>
-            <p><a class="btn btn-default" ui-sref="contes({url: conte.url})" role="button">{{conte.url}}Détails &raquo;</a></p>
+<div class="row" id="box-search">
+    <div class="thumbnail text-center">
+        <img src="images/porto_cerise.jpg" alt="" class="img-responsive">
+        <div class="caption text-center-image">
+            <p>Des contes en veux-tu en voilà</p>
         </div>
     </div>
 </div>
 
+
+
 <div class="container">
     <!-- Example row of columns -->
+    <h2 class="text-center">
+        Nos contes
+    </h2>
     <div class="row">
-        <div class="col-md-12 text-center" ng-repeat="conte in contes">
+        <div class="col-md-3 text-center" ng-repeat="conte in contes">
+            <img class="img-circle" src="images/books.jpg" width="140" height="140">
             <h2>{{ conte.name }}</h2>
             <p>{{ conte.description }}</p>
-            <p>{{ conte.text }}</p>
+            <p><a class="btn btn-default" ui-sref="conte({url: conte.url})" role="button">Détails &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="box-search">
+    <div class="thumbnail text-center">
+        <img src="images/musee_sombre.jpg" alt="" class="img-responsive">
+        <div class="caption text-center-image">
+            <p>Qui sommes-nous ? </p>
+            <button type="button" class="btn btn-default btn-lg" ui-sref="about">A propos</button>
         </div>
     </div>
 </div>

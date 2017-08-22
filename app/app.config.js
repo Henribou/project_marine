@@ -24,6 +24,12 @@
                     })
 
                     .state('contes', {
+                        url:'/contes',
+                        templateUrl: 'pages/contes/contes-list.tmpl.html',
+                        controller: 'contesCtrl'
+                    })
+
+                    .state('conte', {
                         url: '/contes/:url',
                         template: '<conte-detail></conte-detail>',
                     })
